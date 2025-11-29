@@ -138,29 +138,30 @@ ${m.minimalVersion}
           variant="outline"
           size="sm"
           disabled={disabled || mnemonics.length === 0}
-          className="gap-2"
+          className="gap-1.5 sm:gap-2 text-xs sm:text-sm h-8 sm:h-9 px-2.5 sm:px-3
+                     hover:bg-primary/5 hover:border-primary/50"
         >
-          <Download className="h-4 w-4" />
-          Export
+          <Download className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+          <span className="hidden xs:inline">Export</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
-        <DropdownMenuLabel className="flex items-center gap-2">
+      <DropdownMenuContent align="end" className="w-44 sm:w-48">
+        <DropdownMenuLabel className="flex items-center gap-2 text-xs sm:text-sm">
           <span>💾</span>
           <span>Export Format</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={exportAsTxt} className="gap-2 cursor-pointer">
-          <FileText className="h-4 w-4" />
-          <span>Plain Text (.txt)</span>
+          <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
+          <span className="text-xs sm:text-sm">Plain Text (.txt)</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={exportAsMd} className="gap-2 cursor-pointer">
-          <FileCode className="h-4 w-4" />
-          <span>Markdown (.md)</span>
+          <FileCode className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
+          <span className="text-xs sm:text-sm">Markdown (.md)</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={exportAsJson} className="gap-2 cursor-pointer">
-          <FileJson className="h-4 w-4" />
-          <span>JSON Flashcards</span>
+          <FileJson className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
+          <span className="text-xs sm:text-sm">JSON Flashcards</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
